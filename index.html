@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+
+    <style>
+      body {
+        background-color: blanchedalmond;
+      }
+
+      h2 {
+        font-family: system-ui, "Segoe UI", "Open Sans", "Helvetica Neue",
+          sans-serif;
+        font-weight: bold;
+        color: mediumslateblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Ascending and Decending for mapped numbers</h2>
+    <p id="product_value"></p>
+    <button
+      onclick="ascending()"
+      style="background-color: rgb(255, 180, 255); font-weight: bold"
+    >
+      Ascending order
+    </button>
+    <button
+      onclick="descending()"
+      style="background-color: rgb(165, 196, 255); font-weight: bold"
+    >
+      Descending order
+    </button>
+
+    <script>
+      var points = [20, 11, 25, 23, 16];
+
+      function myFunction(num) {
+        return num * 50;
+      }
+
+      var newarray = number.map(myFunction);
+      document.getElementById("product_value").innerHTML =
+        "The Mapped value are: " + newarray;
+
+      function ascending() {
+        newarray.sort(function (a, b) {
+          return a - b;
+        });
+        document.getElementById("product_value").innerHTML =
+          "The ascending order of mapped values are: " + newarray;
+      }
+
+      function descending() {
+        newarray.sort(function (a, b) {
+          return b - a;
+        });
+        document.getElementById("product_value").innerHTML =
+          "The descending order of mapped values are: " + newarray;
+      }
+    </script>
+  </body>
+</html>
