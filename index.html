@@ -5,12 +5,12 @@
 
     <style>
       body {
-        background-color: blanchedalmond;
+        background-color: rgb(254, 238, 215);
+        text-align: center;
       }
 
       h2 {
-        font-family: system-ui, "Segoe UI", "Open Sans", "Helvetica Neue",
-          sans-serif;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
         font-weight: bold;
         color: mediumslateblue;
       }
@@ -19,6 +19,7 @@
 
   <body>
     <h2>Ascending and Decending for mapped numbers</h2>
+    <hr />
     <p id="product_value"></p>
     <button
       onclick="ascending()"
@@ -40,7 +41,7 @@
         return num * 50;
       }
 
-      var newarray = number.map(myFunction);
+      var newarray = points.map(myFunction);
       document.getElementById("product_value").innerHTML =
         "The Mapped value are: " + newarray;
 
